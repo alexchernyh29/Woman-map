@@ -1,0 +1,50 @@
+mixin map()
+    +b('section').map
+        +e.container
+            +e.slider
+                +e.item Май
+                +e.item Июнь
+                +e.item Июль
+                +e.item Август
+                +e.item Сентябрь
+                +e.item Октябрь
+                +e.item Ноябрь
+                +e.item Декабрь
+                +e.item Январь
+                +e.item Февраль
+                +e.item Март
+                +e.item Апрель
+            +e.map
+                img(src='/images/map.png')
+                +e.point.south
+                +e.point.center
+                +e.point.north
+                +e.point.ural
+                +e.point.siberia
+                +e.pin.south 
+                    +e.pin-title Юг россии
+                    +e.pin-text.south Платан, сирень, одуванчик, орех, свекла, сосна, каштан, липа, шелковица, табак
+                +e.pin.center 
+                    +e.pin-title Центральная полоса
+                    +e.pin-text.center Береза, клен, дуб, сосна
+                +e.pin.north 
+                    +e.pin-title Северо-западный регион
+                    +e.pin-text.north Ольха, ива, береза, ясень, тополь, вяз, клен
+                +e.pin.ural 
+                    +e.pin-title Урал
+                    +e.pin-text.ural Ива, ольха, осина, береза, лещина, вяз, клен, дуб, ясень, сосна, липа, мятлик, тимофеевка, овсянница
+                +e.pin.siberia
+                    +e.pin-title Сибирь
+                    +e.pin-text.siberia Береза, одуванчик
+            +e('a')(href="#").link узнать больше
+            +e.wrap-button
+                +e.wrap__button-prev
+                    +e.arrow
+                        img(src='/images/arrow-prev.svg')
+                +e.wrap__button-next
+                    +e.arrow__next
+                        img(src='/images/arrow-next.svg')
+            +e.info
+                +e('p').text Выбирайте месяц и регион на карте, чтобы посмотреть список цветущих растений
+                +e('button').btn-close все понятно
+            

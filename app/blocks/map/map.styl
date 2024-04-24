@@ -1,0 +1,270 @@
+.map
+    position relative
+    width 100%
+    height 100vh
+    background-color transparent
+    overflow hidden
+    +below(769px)
+        overflow auto
+        height 100vh
+
+    &__container
+        display flex
+        flex-direction column
+        justify-content center
+        align-items center
+        +below(769px)
+            margin-bottom wm(30)
+            height 90%
+            justify-content space-between
+
+    &__info
+        position absolute
+        top 50%
+        left 50%
+        transform translate(-50%, -50%)
+        padding w(55)
+        border-radius w(33)
+        background $c-white
+        display flex
+        flex-direction column
+        justify-content center
+        align-items center
+        +below(769px)
+            width wm(280)
+            border-radius wm(18)
+            padding wm(25) wm(20)
+
+    &__text
+        max-width w(455)
+        font-family $ff-Roboto
+        font-weight 400
+        font-size w(24)
+        line-height w(28)
+        text-align center
+        color #264e3a
+        +below(769px)
+            max-width wm(245)
+            font-size wm(12)
+            line-height wm(16)
+
+
+    &__btn-close
+        border none
+        margin-top w(45)
+        background-color #FBFF3F
+        padding w(30) w(80)
+        border-radius w(24)
+        font-family $ff-Robotomedium
+        font-weight 500
+        font-size w(20)
+        line-height w(24)
+        color #264e3a
+        text-transform: uppercase;
+        +below(769px)
+            border-radius wm(13)
+            margin-top wm(15)
+            font-size wm(10)
+            line-height wm(14)
+            padding wm(15) wm(50)
+
+    &__slider
+        width w(200)
+        margin w(40) auto w(0)
+        display flex
+        flex-direction row
+        justify-content center
+        align-items center
+        +below(769px)
+            width wm(150)
+            margin wm(40) auto wm(0)
+
+    &__item
+        font-family $ff-Robotomedium
+        font-weight 500
+        font-size w(20)
+        line-height w(24)
+        letter-spacing 0.23em
+        text-transform uppercase
+        text-align center
+        color $c-yellow
+        +below(769px)
+            font-size wm(10)
+            line-height wm(14)
+
+    &__map
+        position relative
+        margin 0 auto
+        width w(1000)
+        img
+            width 100%
+
+        +below(769px)
+            width wm(400)
+
+    &__link
+        padding w(30) w(50)
+        font-family $ff-Robotomedium
+        font-weight 600
+        font-size w(20)
+        line-height w(24)
+        letter-spacing 0.23em
+        text-transform uppercase
+        text-align center
+        color $c-white
+        border-radius w(32)
+        background linear-gradient(30deg, #378255 0%, #b5d177 100%)
+        text-decoration none
+        +below(769px)
+            font-size wm(12)
+            line-height wm(16)
+            border-radius wm(12)
+            margin-top wm(20)
+            padding wm(15) wm(20)
+
+    &__wrap-button
+        position absolute
+        z-index 1
+        top w(20)
+        left 40.5%
+        width w(350)
+        display flex
+        flex-direction row
+        justify-content space-between
+        align-items center
+        +below(769px)
+            width wm(200)
+            top wm(20)
+            left 20%
+
+    &__wrap__button-prev,
+    &__wrap__button-next
+        width w(60)
+        height w(60)
+        cursor pointer
+        border w(3) solid $c-white
+        border-radius 50%
+        background transparent
+        img
+            width 100%
+        +below(769px)
+            width wm(45)
+            height wm(45)
+            border wm(3) solid $c-white
+
+    &__wrap__button-prev
+        padding-top w(20)
+        padding-left w(15)
+        +below(769px)
+            padding-top wm(15)
+            padding-left wm(10)
+
+    &__wrap__button-next
+        padding-top w(20)
+        padding-left w(15)
+        +below(769px)
+            padding-top wm(15)
+            padding-left wm(10)
+
+    &__arrow,
+    &__arrow__next
+        width w(30)
+        img
+            width 100%
+        +below(769px)
+            width wm(20)
+
+    &__pin
+        position absolute
+        width w(300)
+        height auto
+        background-color $c-yellow
+        border-radius w(20)
+        padding w(25) w(30)
+        &.south
+            bottom -5%
+            left -10%
+        &.center
+            bottom 28%
+            left -6%
+        &.north
+            bottom 55%
+            left -4%
+        &.ural
+            bottom 28%
+            left 27%
+        &.siberia
+            bottom 36%
+            left 58%
+        +below(769px)
+            border-radius wm(12)
+            padding wm(20) wm(40)
+            width wm(185)
+            &.south,
+            &.center,
+            &.north,
+            &.ural,
+            &.siberia
+                bottom -40%
+                left 17%
+
+    &__pin-title
+        font-family $ff-Robotomedium
+        font-weight 600
+        font-size w(20)
+        line-height w(24)
+        letter-spacing 0.23em
+        text-transform uppercase
+        text-align center
+        color $c-green
+        +below(769px)
+            font-size wm(10)
+            line-height wm(14)
+
+
+    &__pin-text
+        margin-top w(10)
+        font-family $ff-Robotomedium
+        font-weight 400
+        font-size w(20)
+        line-height w(18)
+        letter-spacing 0.01em
+        text-align center
+        color $c-green
+        +below(769px)
+            margin-top wm(10)
+            font-size wm(12)
+            line-height wm(16)
+
+    &__point
+        position absolute
+        width w(30)
+        height w(30)
+        border-radius 50%
+        background-color $c-yellow
+        border w(8) solid transparent
+        box-shadow 0 0 0 w(1) $c-yellow
+        &.south
+            bottom 19%
+            left 7%
+        &.center
+            bottom 33%
+            left 16%
+        &.north
+            bottom 48%
+            left 22%
+        &.ural
+            bottom 35%
+            left 35%
+        &.siberia
+            bottom 36%
+            left 58%
+        +below(769px)
+            width wm(25)
+            height wm(25)
+            border wm(5) solid transparent
+            box-shadow 0 0 0 wm(1) $c-yellow
+            &.center
+                bottom 28%
+            &.north
+                bottom 46%
