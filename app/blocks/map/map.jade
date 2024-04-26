@@ -17,10 +17,17 @@ mixin map()
             +e.map
                 img(src='/images/map.png')
                 +e.point.south
+                    +e.pulse
                 +e.point.center
+                    +e.pulse
                 +e.point.north
+                    +e.pulse
                 +e.point.ural
+                    +e.pulse
                 +e.point.siberia
+                    +e.pulse
+                +e.point.primorsky
+                    +e.pulse
                 +e.pin.south 
                     +e.pin-title Юг россии
                     +e.pin-text.south Платан, сирень, одуванчик, орех, свекла, сосна, каштан, липа, шелковица, табак
@@ -36,6 +43,9 @@ mixin map()
                 +e.pin.siberia
                     +e.pin-title Сибирь
                     +e.pin-text.siberia Береза, одуванчик
+                +e.pin.primorsky
+                    +e.pin-title Приморский край
+                    +e.pin-text.primorsky Береза, дуб, ясень, ольха, лещина, тополь, клен
             +e('a')(href="#").link узнать больше
             +e.wrap-button
                 +e.wrap__button-prev
